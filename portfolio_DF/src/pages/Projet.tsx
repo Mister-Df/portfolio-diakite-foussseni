@@ -36,13 +36,23 @@ export default function Projet({activeProject, setActiveProject}: ProjectType) {
                   className={`project-card ${project.color}`}
                   key={project.number}
                 >
-                  <div className="project-art">
+                  <div className={`project-art ${project.image ? 'has-screenshot' : ''}`}>
                     <span className="project-no">{project.number} / 03</span>
-                    <div className="project-art-icon">
-                      <Icon size={54} strokeWidth={1.1} />
-                    </div>
-                    <div className="art-orbit" />
-                    <span className="art-cross">+</span>
+                    {project.image ? (
+                      <img
+                        className="project-screenshot"
+                        src={project.image}
+                        alt={`Capture d’écran du projet ${project.title}`}
+                      />
+                    ) : (
+                      <>
+                        <div className="project-art-icon">
+                          <Icon size={54} strokeWidth={1.1} />
+                        </div>
+                        <div className="art-orbit" />
+                        <span className="art-cross">+</span>
+                      </>
+                    )}
                   </div>
                   <div className="project-info">
                     <p className="project-category">{project.category}</p>

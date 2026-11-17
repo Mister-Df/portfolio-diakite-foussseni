@@ -1,4 +1,5 @@
-import { Code2, Database, Globe2, Palette, Smartphone } from "lucide-react";
+import { Code2, Database, Palette, Smartphone } from "lucide-react";
+import image1 from "../assets/co.png";
 
 export const skills = [
   {
@@ -48,7 +49,8 @@ export const projects = [
     description:
       "Interface responsive développée avec React et TypeScript, gestion des états et consommation d’API REST.",
     stack: ["React", "TypeScript", "REST API"],
-    icon: Globe2,
+    icon: Code2,
+    image: image1,
     color: "mint",
     details:
       "Projet personnel orienté frontend : construction d'une interface claire, réutilisable et adaptée aux écrans mobiles. Les données sont récupérées depuis une API REST.",

@@ -592,6 +592,17 @@ textarea {
     ),
     #111e2c;
 }
+.project-art.has-screenshot {
+ display: block;
+ background: #111e2c;
+}
+.project-screenshot {
+ width: 100%;
+ height: 100%;
+ display: block;
+ object-fit: cover;
+ object-position: center top;
+}
 .project-card.violet .project-art {
   background:
     radial-gradient(
