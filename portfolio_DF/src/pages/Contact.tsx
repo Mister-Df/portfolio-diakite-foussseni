@@ -50,6 +50,15 @@ export default function Contact({ sent, sending, contactError, name, email, mess
                 </span>
                 <ArrowUpRight size={17} />
               </a>
+              <a className="contact-detail" href="tel:+2250101598917">
+                <span className="contact-detail-icon">
+                  <Smartphone size={18} />
+                </span>
+                <span>
+                  <small>APPELEZ-MOI</small>+225 01 01 59 89 17
+                </span>
+                <ArrowUpRight size={17} />
+              </a>
               <div className="socials">
                 <a
                   href="https://github.com/"

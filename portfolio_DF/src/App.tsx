@@ -50,6 +50,7 @@ function App() {
         setContactError("Veuillez remplir tous les champs.");
         setSending(false);
         return;
+        
       }
 
       if (!response.ok || result.success !== "true" && result.success !== true) {
