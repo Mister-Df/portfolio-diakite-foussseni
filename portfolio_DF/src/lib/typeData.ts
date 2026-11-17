@@ -5,9 +5,17 @@ export type MenuType={
 }
 
 export type Booll ={
-    sent: Boolean,
+    sent: boolean,
+    sending: boolean,
+    contactError: string,
     setSent: React.Dispatch<React.SetStateAction<boolean>>,
-    handleContact: React.FormEventHandler<HTMLFormElement>
+    handleContact: React.FormEventHandler<HTMLFormElement>,
+    name: string,
+    email: string,
+    message: string,
+    setName: React.Dispatch<React.SetStateAction<string>>,
+    setEmail: React.Dispatch<React.SetStateAction<string>>,
+    setMessage: React.Dispatch<React.SetStateAction<string>>
 }
 
 export type ProjectType={

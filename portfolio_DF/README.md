@@ -1,32 +1,33 @@
-# React + TypeScript + Vite
+# Portfolio — Fousseni Diakité
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio responsive construit avec **React + TypeScript + Vite**.
 
-Currently, two official plugins are available:
+## Lancer le projet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Ouvrir l'adresse affichée par Vite (généralement `http://localhost:5173`).
+
+## Construire pour la production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Personnalisation indispensable avant publication
+
+1. Dans `src/App.tsx`, remplacez les liens GitHub et LinkedIn génériques par vos profils réels.
+2. Dans les cartes projets, ajoutez les noms exacts, captures d'écran, liens GitHub et URL de démonstration de vos réalisations.
+3. Le formulaire de contact ouvre actuellement le logiciel de messagerie via `mailto:`. Pour recevoir les messages directement depuis le site, connectez un service de formulaire ou votre propre API.
+4. Vérifiez le numéro de téléphone et l'adresse e-mail avant mise en ligne.
+
+## Structure
+
+- `src/App.tsx` : contenu, sections et interactions React.
+- `src/styles.css` : thème visuel, responsive et animations de survol.
+- `index.html` : métadonnées et point d'entrée HTML.
+# portfolio-diakite-foussseni

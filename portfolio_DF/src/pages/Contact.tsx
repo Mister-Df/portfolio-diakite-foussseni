@@ -9,7 +9,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import type { Booll } from "../lib/typeData";
-export default function Contact({ sent, setSent, handleContact }: Booll) {
+export default function Contact({ sent, sending, contactError, name, email, message, setName, setEmail, setMessage, setSent, handleContact }: Booll) {
   // console.log(handleContact);
 
   return (
@@ -80,9 +80,12 @@ export default function Contact({ sent, setSent, handleContact }: Booll) {
               <label>
                 Votre nom
                 <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                   required
                   name="name"
                   placeholder="Comment vous appelez-vous ?"
+                  
                 />
               </label>
               <label>
@@ -91,12 +94,17 @@ export default function Contact({ sent, setSent, handleContact }: Booll) {
                   required
                   type="email"
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="nom@entreprise.com"
                 />
               </label>
               <label>
                 Votre message
                 <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+
                   required
                   name="message"
                   rows={5}
@@ -106,19 +114,16 @@ export default function Contact({ sent, setSent, handleContact }: Booll) {
               <button
                 className="button button-primary submit-button"
                 type="submit"
+                disabled={sending}
               >
-                Envoyer le message <ArrowUpRight size={17} />
+                {sending ? "Envoi en cours..." : "Envoyer le message"} <ArrowUpRight size={17} />
               </button>
               {sent && (
-                <p className="form-hint">
-                  <CheckCircle2 size={15} /> Votre application e-mail va
-                  s’ouvrir pour envoyer le message.
+                <p className="form-hint" role="status">
+                  <CheckCircle2 size={15} /> Votre message a bien été envoyé.
                 </p>
               )}
-              <p className="form-hint">
-                Le formulaire prépare un e-mail dans votre messagerie (aucun
-                serveur requis).
-              </p>
+              {contactError && <p className="form-hint" role="alert">{contactError}</p>}
             </form>
           </div>
         </div>
