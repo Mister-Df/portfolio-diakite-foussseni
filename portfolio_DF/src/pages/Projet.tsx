@@ -3,7 +3,7 @@ import { projects } from '../lib/data';
 import type { ProjectType } from '../lib/typeData';
 
 
-export default function Projet({activeProject, setActiveProject}: ProjectType) {
+export default function Projet({ setActiveProject}: ProjectType) {
 
     
 

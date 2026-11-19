@@ -9,7 +9,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import type { Booll } from "../lib/typeData";
-export default function Contact({ sent, sending, contactError, name, email, message, setName, setEmail, setMessage, setSent, handleContact }: Booll) {
+export default function Contact({ sent, sending, contactError, name, email, message, setName, setEmail, setMessage, handleContact }: Booll) {
   // console.log(handleContact);
 
   return (
@@ -50,7 +50,7 @@ export default function Contact({ sent, sending, contactError, name, email, mess
                 </span>
                 <ArrowUpRight size={17} />
               </a>
-              
+
               <div className="socials">
                 <a
                   href="https://github.com/"
