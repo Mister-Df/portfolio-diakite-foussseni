@@ -47,13 +47,13 @@ export const projects = [
     category: "APPLICATION WEB",
     title: "Application web moderne",
     description:
-      "Interface responsive développée avec React et TypeScript, gestion des états et consommation d’API REST.",
+      "Interface responsive développée avec React, gestion des états.",
     stack: ["React", "TypeScript", "REST API"],
     icon: Code2,
     image: image1,
     color: "mint",
     details:
-      "Projet personnel orienté frontend : construction d'une interface claire, réutilisable et adaptée aux écrans mobiles. Les données sont récupérées depuis une API REST.",
+      "Projet personnel orienté frontend : construction d'une interface claire, réutilisable et adaptée aux écrans mobiles. Dans ce projet Coffe Machine, tâche consiste à traduire les commandes des clients de la machine à café vers la machine à boisson.",
   },
   {
     number: "02",
